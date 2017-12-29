@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="tests">
+  <test name="Test11(failed)" parallel="tests">
+    <classes>
+      <class name="pagetests.CreateLead">
+        <methods>
+          <include name="beforeTest"/>
+          <include name="afterTest"/>
+          <include name="beforeSuite"/>
+          <include name="afterSuite"/>
+          <include name="createLead"/>
+          <include name="afterMethod"/>
+          <include name="beforeMethod"/>
+          <include name="setValues"/>
+        </methods>
+      </class> <!-- pagetests.CreateLead -->
+      <class name="pagetests.MergeLead">
+        <methods>
+          <include name="beforeTest"/>
+          <include name="afterTest"/>
+          <include name="beforeSuite"/>
+          <include name="afterSuite"/>
+          <include name="setValues"/>
+          <include name="afterMethod"/>
+          <include name="beforeMethod"/>
+          <include name="mergeLead"/>
+        </methods>
+      </class> <!-- pagetests.MergeLead -->
+    </classes>
+  </test> <!-- Test11(failed) -->
+  <test name="Test(failed)" parallel="tests">
+    <classes>
+      <class name="pagetests.DeleteLead">
+        <methods>
+          <include name="deleteLead"/>
+          <include name="beforeTest"/>
+          <include name="afterTest"/>
+          <include name="beforeSuite"/>
+          <include name="setValues"/>
+          <include name="afterSuite"/>
+          <include name="afterMethod"/>
+          <include name="beforeMethod"/>
+        </methods>
+      </class> <!-- pagetests.DeleteLead -->
+      <class name="pagetests.EditLead">
+        <methods>
+          <include name="editLead"/>
+          <include name="beforeTest"/>
+          <include name="afterTest"/>
+          <include name="beforeSuite"/>
+          <include name="afterSuite"/>
+          <include name="setValues"/>
+          <include name="afterMethod"/>
+          <include name="beforeMethod"/>
+        </methods>
+      </class> <!-- pagetests.EditLead -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
