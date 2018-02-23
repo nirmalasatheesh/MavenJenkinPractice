@@ -11,47 +11,48 @@ import com.relevantcodes.extentreports.ExtentTest;
 import wdMethods.ProjectMethods;
 
 public class CreateLeadPage extends ProjectMethods{
-	
+
 	public CreateLeadPage(RemoteWebDriver driver,ExtentTest test) {
+		PageFactory.initElements(driver, this);
 		this.driver=driver;
 		this.test=test;
-		PageFactory.initElements(driver, this);
 	}
-	
+
 	@FindBy(how=How.ID,using="createLeadForm_companyName")
-	private WebElement elecompanyname;
-	
-	
-	public CreateLeadPage typecompanyname(String cName) {
-		type(elecompanyname, cName);
+	private WebElement eleCompanyName;
+	public CreateLeadPage typeCompanyName(String companyname)
+	{
+		type(eleCompanyName,companyname);
+		return this;
+	}
+
+	@FindBy(how=How.ID,using="createLeadForm_firstName")
+	private WebElement eleFirstName;
+	public CreateLeadPage typeFirstName(String firstname){
+		type(eleFirstName,firstname);
+		return this;
+	}
+
+	@FindBy(how=How.ID,using="createLeadForm_lastName")
+	private WebElement eleLastName;
+	public CreateLeadPage typeLastName(String lastname){
+		type(eleLastName,lastname);
 		return this;
 	}
 	
-	@FindBy(how = How.ID,using = "createLeadForm_firstName")
-	private WebElement elefirstname;
-	
-	public CreateLeadPage typefirstname(String firstname)
-	{
-		type(elefirstname,firstname);
+	@FindBy(how=How.ID,using="createLeadForm_primaryPhoneNumber")
+	private WebElement elePhoneNum;
+	public CreateLeadPage typePhoneNum(String num){
+		type(elePhoneNum,num);
 		return this;
+		
 	}
-	
-	@FindBy(how = How.ID,using = "createLeadForm_lastName")
-	private WebElement elelastname;
-	
-	public CreateLeadPage typelastname(String lName)
-	{
-		type(elelastname,lName);
-		return this;
-	}
-	
-	
-	@FindBy(how=How.NAME,using="submitButton")
-	private WebElement elecreateleadbutton;
-	
-	public ViewPage clickcreateleadbutton() 
-	{
-		click(elecreateleadbutton);
-		return new ViewPage(driver,test);
-	}
+
+	@FindBy(how=How.CLASS_NAME,using="smallSubmit")
+	private WebElement eleFind;
+	public ViewLeadPage clickCreatLead(){
+		click(eleFind);
+		return new ViewLeadPage(driver,test);
+
+}
 }

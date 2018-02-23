@@ -22,7 +22,7 @@ public class MergeLead extends ProjectMethods{
 		
 	}
 	@Test(dataProvider="fetchData")
-	public void editLead(String firstleadid,String secondleadid) throws InterruptedException {
+	public void mergeLead (String firstleadid,String secondleadid) throws InterruptedException {
 		new MyHomePage(driver, test)
 		.clickLeadTab()
 		.clickMergeLead()
@@ -31,10 +31,11 @@ public class MergeLead extends ProjectMethods{
 		.clickmergeFindtlead()
 		.selectgridmergefirst()
 		.Clickmergesecondicon()
-		.typemergesecondleadid(secondleadid)
+		.typemergefirstleadid(secondleadid)
 		.clickmergeFindtlead()
-		.selectgridmergesecond()
+		.selectgridmergefirst()
 		.clickmergebutton();
+		
 		
 	}
 }

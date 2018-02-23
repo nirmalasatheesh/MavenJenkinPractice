@@ -44,6 +44,7 @@ public class Leaftaps {
 		//Click on Login Button
 		driver.findElementByClassName("decorativeSubmit").click();
 		
+
 		// Find the title
 		String title = driver.getTitle();
 		if(title.equals("Opentaps Open Source ERP + CRM")) {

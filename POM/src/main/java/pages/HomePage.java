@@ -13,9 +13,9 @@ import wdMethods.ProjectMethods;
 public class HomePage extends ProjectMethods{
 	
 	public HomePage(RemoteWebDriver driver,ExtentTest test) {
+		PageFactory.initElements(driver, this);
 		this.driver=driver;
 		this.test=test;
-		PageFactory.initElements(driver, this);
 	}
 	
 	

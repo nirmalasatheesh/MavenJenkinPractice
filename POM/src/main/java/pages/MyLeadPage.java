@@ -13,9 +13,9 @@ import wdMethods.ProjectMethods;
 public class MyLeadPage extends ProjectMethods{
 	
 	public MyLeadPage(RemoteWebDriver driver,ExtentTest test) {
+		PageFactory.initElements(driver, this);
 		this.driver=driver;
 		this.test=test;
-		PageFactory.initElements(driver, this);
 	}
 	
 	@FindBy(how=How.LINK_TEXT,using="Create Lead")
@@ -27,22 +27,22 @@ public class MyLeadPage extends ProjectMethods{
 	}
 	
 	@FindBy(how=How.LINK_TEXT,using="Find Leads")
-	private WebElement elefindLead;
-	
-	public FindLeadPage clickFindLead() {
-		click(elefindLead);
+	private WebElement eleFindlead;
+	public FindLeadPage clickFindLead(){
+		click(eleFindlead);	
 		return new FindLeadPage(driver,test);
 	}
 	
 	@FindBy(how=How.LINK_TEXT,using="Merge Leads")
-	private WebElement elemergeLead;
+	private WebElement eleMergeLink;
+	public MergeLeadPage clickMergeLead(){
+		click(eleMergeLink);
+		return new MergeLeadPage(driver,test);
 	
-	public Mergepage clickMergeLead() {
-		click(elemergeLead);
-		return new Mergepage(driver,test);
 	}
 	
-	
+}
+
 	
 	
 	
@@ -64,4 +64,4 @@ public class MyLeadPage extends ProjectMethods{
 	
 	
 
-}
+

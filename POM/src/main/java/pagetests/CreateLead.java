@@ -26,11 +26,12 @@ public class CreateLead extends ProjectMethods{
 		new MyHomePage(driver, test)
 		.clickLeadTab()
 		.clickCreateLead()
-		.typecompanyname(cName)
-		.typefirstname(fName)
-		.typelastname(lName)
-		.clickcreateleadbutton()
-		.verifyfname(fName);
+		.typeCompanyName(cName)
+		.typeFirstName(fName)
+		.typeLastName(lName)
+		.clickCreatLead()
+		.verifyExpectedTextfyFirstName(fName);
+		
 		
 	}
 }

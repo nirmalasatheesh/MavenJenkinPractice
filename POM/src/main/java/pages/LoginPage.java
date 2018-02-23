@@ -13,9 +13,9 @@ import wdMethods.ProjectMethods;
 public class LoginPage extends ProjectMethods{
 	
 	public LoginPage(RemoteWebDriver driver,ExtentTest test) {
+		PageFactory.initElements(driver, this);
 		this.driver=driver;
 		this.test=test;
-		PageFactory.initElements(driver, this);
 	}
 	
 	@FindBy(how=How.ID,using="username")

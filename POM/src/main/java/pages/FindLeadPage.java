@@ -21,7 +21,7 @@ public class FindLeadPage extends ProjectMethods{
 	@FindBy(how =How.XPATH,using="(//input[@name = 'id'])")
 	private WebElement eleeditleadid;
 		
-	public FindLeadPage typeeditleadid(String editleadid)	
+	public FindLeadPage typemergefirstleadid(String editleadid)	
 	{
 		type(eleeditleadid, editleadid);
 		return this;
@@ -32,7 +32,7 @@ public class FindLeadPage extends ProjectMethods{
 	@FindBy(how = How.XPATH,using="//button[text()='Find Leads']")
 	private WebElement elefindleadbutton;
 	
-	public FindLeadPage clickfindleadsbutton() throws InterruptedException 
+	public FindLeadPage clickmergeFindtlead() throws InterruptedException 
 	{
 		click(elefindleadbutton);
 				return this;
@@ -40,10 +40,11 @@ public class FindLeadPage extends ProjectMethods{
 	@FindBy(how = How.XPATH,using ="//div[@class= 'x-grid3-cell-inner x-grid3-col-partyId']//a")
 	private WebElement elegridfirst;
 	
-	public ViewPage clickfirstnamegrid() 
+	public MergeLeadPage selectgridmergefirst() 
 	{
 		click(elegridfirst);
-		return new ViewPage(driver,test);
+		switchToWindow(0);
+		return new MergeLeadPage(driver,test);
 	}
 	
 	

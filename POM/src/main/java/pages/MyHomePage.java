@@ -13,9 +13,9 @@ import wdMethods.ProjectMethods;
 public class MyHomePage extends ProjectMethods{
 	
 	public MyHomePage(RemoteWebDriver driver,ExtentTest test) {
+		PageFactory.initElements(driver, this);
 		this.driver=driver;
 		this.test=test;
-		PageFactory.initElements(driver, this);
 	}
 	
 	@FindBy(how=How.LINK_TEXT,using="Leads")

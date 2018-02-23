@@ -1,9 +1,12 @@
 package wdMethods;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Properties;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
@@ -27,11 +30,15 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import utils.Reporter;
 
 public class SeMethods extends Reporter implements WdMethods{
-
-	//public static RemoteWebDriver driver;
-	//(static -- to avoid open multiple browsers for parallel testcases.this one help for individual tc)
-	public RemoteWebDriver driver;
-	//(parallel execution))
+	
+/*This one is help for run in individual*/
+	/*public static RemoteWebDriver driver;*/
+	
+	//this one is run in parallel and individual
+	public  RemoteWebDriver driver;
+	
+	
+	
 	public String sUrl,primaryWindowHandle,sHubUrl,sHubPort;
 
 	public void startApp(String browser, String url) {

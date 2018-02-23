@@ -7,13 +7,11 @@ import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 
 public abstract class Reporter implements ExtentReporter{
-	//public static ExtentTest test;
-	
-	 public ExtentTest test;
-	 //separate testcases wise will display
-	 
-	 public static ExtentReports extent;
-		
+	/*//This one is used in individual report
+	public static ExtentTest test;*/
+	//This one is help for parallel and individual
+	public  ExtentTest test;
+	public static ExtentReports extent;
 	public String testCaseName, testDescription, category, authors;
 
 	
@@ -25,7 +23,7 @@ public abstract class Reporter implements ExtentReporter{
 			snapNumber= takeSnap();
 		} catch (Exception e) {
 			e.printStackTrace();
-		}
+		}        
 		
 		// Write if it is successful or failure or information
 		if(status.toUpperCase().equals("PASS")){
